@@ -1,0 +1,129 @@
+button{
+    width: 400px;
+    height: 200px;
+    margin: 100px;
+    border: none;
+}
+
+.heaven{
+    font-family: 'Dancing Script', cursive;
+    font-size: 4em;
+    background: linear-gradient(to right, #12c2e9, #c471ed, #f64f59);
+    border-radius: 30px;
+    transition: transform 1s ease 0.3s;
+   
+}
+
+.heaven:hover{
+    transform: scale(1,2);
+    background: #12c2e9;
+    border-radius: 805%;
+    color: white;
+    text-shadow:0 0 21px white;
+    cursor: pointer;
+    letter-spacing: 15px;
+}
+
+.hell{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 4em;
+    background: black;
+    color:  #dd1818;
+    border: 15px double  #dd1818;
+    transition: transform 1s ease-in-out 0.3s;
+    
+}
+
+.hell:hover{
+    transform: rotate(90deg);
+    background: linear-gradient(to right, #111010, #dd1818);
+    color: black;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+    
+}
+
+.hell:hover>span{
+    display:block;
+    transform: rotate(-90deg);
+    letter-spacing: 2px;
+    font-size: 1em;
+}
+
+
+
+@keyframes StH{
+ 0%{
+color: #12c2e9;
+transform: rotate(20deg);
+ }  
+ 20%{
+color: #188097;
+transform: rotate(-20deg);
+ } 
+ 40%{
+color: #115d6e;
+transform: rotate(35deg);
+transform: scale(1.5);
+ }
+ 60%{
+color: #063641;
+transform: rotate(-35deg);
+transform: scale(2);
+text-transform: uppercase;
+ }
+ 80%{
+color: #1e9bb8;
+transform: rotate(-20deg);
+transform: scale(1.5);
+ }
+ 100%{
+color: rgb(32, 184, 184);
+transform: rotate(20deg);
+ }
+}
+
+.stairway{
+  animation-name: StH;  
+  animation-duration: 4s;
+  animation-timing-function:ease ;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+
+  text-align: center;
+}
+
+.highway{
+    margin: 300px;
+    background: rgb(85, 6, 6);
+    color: goldenrod;
+    display: inline-block;
+    width: 200px;
+    height: 50px;
+   text-align: center;
+   padding: 100px;
+   font-size: 2em;
+
+   animation-name: HtH;  
+  animation-duration: 4s;
+  animation-timing-function:ease ;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+
+@keyframes HtH{
+    from{
+    text-transform: uppercase;
+    transform: translate(200px);
+    }
+    to{
+      border-radius: 90%;  
+      font-style: italic;
+      transform: scale(2);
+    }
+}
